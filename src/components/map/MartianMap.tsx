@@ -33,7 +33,6 @@ const jezeroBounds: LatLngBoundsExpression = [
   [25.0, 85.0],
 ];
 
-// Start နှင့် End ကြားတွင် Dynamic Hazards, Storm & Radiation ထုတ်ပေးသည့် Helper
 const buildDynamicEnvironment = (
   start: [number, number],
   end: [number, number],
@@ -100,7 +99,7 @@ const buildDynamicEnvironment = (
     },
   ];
 
-  // 🚀 Radiation စက်ဝိုင်းကို Route B လမ်းကြောင်းဗဟိုပေါ်တွင်သာ ကပ်ထားမည် (Route A လုံးဝလွတ်စေရန်)
+  // Dynamic Radiation Zone Calculation
   const radLat = sLat + (eLat - sLat) * 0.54;
   const radLng = sLng + (eLng - sLng) * 0.54;
   const radiation = [

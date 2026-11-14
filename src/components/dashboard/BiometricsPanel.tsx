@@ -11,7 +11,7 @@ export default function BiometricsPanel({
   const { t } = useLanguage();
 
   // 🚀 Dynamic Calculation
-  // Energy ပိုစားလျှင် Oxygen ပိုကျမည်။ သွားနေလျှင် (isNavigating) Oxygen ပိုကျမည်။
+  // Oxygen Level = 100 - (Energy Level / 2) - 15 (if navigating)
   const energyVal = parseInt(activeDetails?.energy || "30");
   const oxygen = isActive
     ? isNavigating
@@ -19,7 +19,7 @@ export default function BiometricsPanel({
       : 100 - Math.floor(energyVal / 2)
     : "--";
 
-  // Rads မြင့်လျှင် Suit Pressure တက်မည်
+  // Pressure Level = 1.2 ATM (Normal) or 1.8 ATM (High Radiation)
   const isHighRad =
     activeDetails?.rads === "HIGH" || activeDetails?.rads === "မြင့်မား";
   const pressure = isActive ? (isHighRad ? "1.8 ATM" : "1.2 ATM") : "-.-";

@@ -33,14 +33,14 @@ export default function RouteSetupModal({
   const [isLoading, setIsLoading] = useState(false);
   const [fetchedRouteData, setFetchedRouteData] = useState<any>(null);
 
-  // 🚀 Error ပြဖို့အတွက် State အသစ် ထည့်ထားပါသည်
+  // fix backend error handling
   const [routeError, setRouteError] = useState(false);
 
   const isEn = lang === "en";
 
   const handleCalculate = async () => {
     setIsLoading(true);
-    setRouteError(false); // Error အဟောင်းများကို ရှင်းမည်
+    setRouteError(false);
 
     try {
       const [safestRes, shortestRes] = await Promise.all([
@@ -76,7 +76,7 @@ export default function RouteSetupModal({
       setStep(2);
     } catch (err) {
       console.error("Calculation Error:", err);
-      setRouteError(true); // 🚀 Error တက်လျှင် Alert ပေါ်လာစေရန် State ကို true လုပ်မည်
+      setRouteError(true);
     } finally {
       setIsLoading(false);
     }
@@ -98,18 +98,18 @@ export default function RouteSetupModal({
               {isEn ? "ROUTE SETUP" : "လမ်းကြောင်း သတ်မှတ်ခြင်း"}
             </h2>
           </div>
-          <button
+          {/* <button
             onClick={(e) => {
-              e.stopPropagation();
               toggleLang();
             }}
             className="flex items-center gap-2 px-3 py-1 border border-mars-panel rounded hover:bg-[#222] transition-colors"
-          >
+          >   e.stopPropagation();
+           
             <Globe className="w-3 h-3 text-mars-primary" />
             <span className="text-xs font-mono font-bold text-gray-300">
               {isEn ? "ENG" : "MYA"}
             </span>
-          </button>
+          </button> */}
         </div>
 
         <div className="p-6 md:p-8">

@@ -15,7 +15,6 @@ export interface MapProps {
   isScanning: boolean;
   isSOS: boolean;
   isNavigating?: boolean;
-  // 🚀 MartianMap တွင် သုံးထားသော Props အသစ်များအားလုံးကို Type သတ်မှတ်ပေးထားသည်
   routeType?: "safest" | "shortest";
   onRouteTypeChange?: (type: "safest" | "shortest") => void;
   onProgressChange?: (progress: number) => void;

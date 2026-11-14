@@ -7,7 +7,7 @@ export interface MissionDetailsProps {
   startCoords: [number, number] | null;
   endCoords: [number, number] | null;
   isNavigating?: boolean;
-  isArrived?: boolean; // 🚀 FIX: isArrived prop ကို Type သတ်မှတ်ပေးထားသည်
+  isArrived?: boolean;
   onInitiate?: () => void;
   calculatedDist?: string;
   estimatedTime?: string;
