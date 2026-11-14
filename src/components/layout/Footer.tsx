@@ -8,7 +8,7 @@ export default function Footer({
   onScan,
   onSOS,
   isSOS,
-  isScanning, // 🚨 Added isScanning prop
+  isScanning,
 }: any) {
   const { t } = useLanguage();
 

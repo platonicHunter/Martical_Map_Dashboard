@@ -58,21 +58,19 @@ export type RouteComparisonData = {
   2: RouteOptionUI;
 };
 
-export interface MapProps {
+interface MapProps {
   isPlanning: boolean;
-  mapSelectMode: MapSelectMode;
-  setMapSelectMode: (mode: MapSelectMode) => void;
-  startCoords: LatLngTuple | null;
-  setStartCoords: (coords: LatLngTuple | null) => void;
-  endCoords: LatLngTuple | null;
-  setEndCoords: (coords: LatLngTuple | null) => void;
-  zoomTrigger: number;
-  isScanning: boolean;
-  isSOS: boolean;
+  mapSelectMode: "start" | "end" | null;
+  setMapSelectMode: (mode: "start" | "end" | null) => void;
+  startCoords: [number, number] | null;
+  setStartCoords: (coords: [number, number] | null) => void;
+  endCoords: [number, number] | null;
+  setEndCoords: (coords: [number, number] | null) => void;
+  activeRouteType?: "safest" | "shortest"; // 🚀 ဤနေရာကို ထည့်ပါ
+  setActiveRouteType?: (type: "safest" | "shortest") => void; // 🚀 ဤနေရာကို ထည့်ပါ
+  routeData: any;
   isNavigating: boolean;
-  routeType: RouteMode;
-  onRouteTypeChange: (type: RouteMode) => void;
-  activeRouteData: RouteOptionUI | null;
-  onProgressChange: (progress: number, currentPos: LatLngTuple) => void;
-  onArrival: () => void;
+  onRoverMove?: (coords: [number, number] | null) => void;
+  onProgressChange?: (progress: number) => void;
+  onArrival?: () => void;
 }

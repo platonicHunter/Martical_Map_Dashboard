@@ -34,7 +34,7 @@ export default function TacticalLayersUI({
   const isEn = lang === "en";
 
   return (
-    <div className="absolute top-4 right-4 z-[999] bg-[#0A0A0A]/95 border border-mars-panel rounded-lg p-4 w-64 font-mono shadow-[0_0_25px_rgba(0,0,0,0.8)] backdrop-blur-md">
+    <div className="absolute top-4 right-4 z-999 bg-mars-bg/95 border border-mars-panel rounded-lg p-4 w-64 font-mono shadow-[0_0_25px_rgba(0,0,0,0.8)] backdrop-blur-md">
       <div className="flex items-center gap-2 text-mars-secondary text-xs font-bold tracking-widest uppercase mb-4 border-b border-[#222] pb-2">
         <Layers className="w-4 h-4" />
         {t("tacticalLayers") || "TACTICAL LAYERS"}

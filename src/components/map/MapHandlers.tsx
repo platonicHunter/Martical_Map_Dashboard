@@ -4,7 +4,6 @@ import { useMap, useMapEvents } from "react-leaflet";
 export function MapClickHandler(props: any) {
   const map = useMap();
 
-  // 🚀 FIX: Mark on Map နှိပ်ထားချိန်တွင် လက်ဝါးပုံ (grab) အစား ပစ်မှတ်ထောက်သည့် (crosshair) ပုံစံသို့ ပြောင်းပေးမည်
   useEffect(() => {
     const container = map.getContainer();
     if (props.mapSelectMode) {
@@ -40,7 +39,6 @@ export function MapActionHandler({
 }) {
   const map = useMap();
 
-  // Start နှင့် End ရွေးလိုက်သည်နှင့် လမ်းကြောင်းတစ်ခုလုံး အကြီးကြီး မြင်ရအောင် Auto Zoom ဆွဲပေးမည်
   useEffect(() => {
     if (startCoords && endCoords) {
       map.fitBounds([startCoords, endCoords], {

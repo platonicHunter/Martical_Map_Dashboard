@@ -4,16 +4,24 @@ import { motion, AnimatePresence } from "framer-motion";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MapWrapper from "@/components/map/MapWrapper";
-import RouteSetupModal from "@/components/map/RouteSetupModal";
+import RouteSetupModal from "@/components/modals/RouteSetupModal";
 import BiometricsPanel from "@/components/dashboard/BiometricsPanel";
 import EnvironmentPanel from "@/components/dashboard/EnvironmentPanel";
 import MavInfoPanel from "@/components/dashboard/MavInfoPanel";
 import SystemLogPanel from "@/components/dashboard/SystemLogPanel";
 import MissionDetailsPanel from "@/components/dashboard/MissionDetailsPanel";
 
+const HAB1_COORDS: [number, number] = [18.4447, 77.4508];
+
 export default function Page() {
   const [isPlanning, setIsPlanning] = useState(true);
   const [navMode, setNavMode] = useState<"sim" | "manual" | null>(null);
+  const [isSosActive, setIsSosActive] = useState(false);
+  const [isSosLoading, setIsSosLoading] = useState(false);
+  const [showDebrief, setShowDebrief] = useState(false);
+  const [currentRoverCoords, setCurrentRoverCoords] = useState<
+    [number, number] | null
+  >(null);
 
   const [mapSelectMode, setMapSelectMode] = useState<"start" | "end" | null>(
     null,

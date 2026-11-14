@@ -24,8 +24,10 @@ import {
   MOCK_RADIATION_ZONES,
   API_BASE_URL,
 } from "@/constants/mockData";
+import ElevationProfile from "./ElevationProfile";
 
 const MAP_URL =
+  process.env.NEXT_PUBLIC_MARA_MAP ||
   "https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-mars-basemap-v0-2/all/{z}/{x}/{y}.png";
 
 const jezeroBounds: LatLngBoundsExpression = [
@@ -464,6 +466,10 @@ export default function MartianMap(props: MapProps) {
           </Marker>
         )}
       </MapContainer>
+
+      {!props.isPlanning && showRoute && telemetryPoints.length > 0 && (
+        <ElevationProfile data={telemetryPoints} routeType={activeRouteType} />
+      )}
     </div>
   );
 }
