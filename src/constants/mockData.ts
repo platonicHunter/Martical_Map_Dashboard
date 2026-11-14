@@ -1,6 +1,6 @@
 export const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_URL ||
-  "https://martical-map-backend.onrender.com/";
+  "https://martical-map-backend.onrender.com";
 
 export const FALLBACK_WEATHER = {
   temp: -52, // Celsius
