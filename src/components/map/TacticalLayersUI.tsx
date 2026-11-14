@@ -4,6 +4,7 @@ import {
   AlertTriangle,
   CloudLightning,
   Navigation,
+  Radio, // Radiation/Thermal အတွက် Icon အသစ်
 } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -29,6 +30,8 @@ export default function TacticalLayersUI({
   setShowRoute,
   routeType,
   setRouteType,
+  showRadiation = false,
+  setShowRadiation,
 }: TacticalLayersProps) {
   const { t, lang } = useLanguage();
   const isEn = lang === "en";
@@ -68,6 +71,22 @@ export default function TacticalLayersUI({
             className="accent-[#FFD700] w-4 h-4 cursor-pointer"
           />
         </label>
+
+        {/* 💜 Purple Zone / Radiation & Thermal Anomaly Toggle */}
+        {setShowRadiation && (
+          <label className="flex items-center justify-between cursor-pointer text-gray-300 hover:text-white">
+            <span className="flex items-center gap-2">
+              <Radio className="w-3.5 h-3.5 text-purple-400" />
+              {isEn ? "Radiation / Thermal" : "ရဒီယိုဇုန်/အပူချိန်"}
+            </span>
+            <input
+              type="checkbox"
+              checked={showRadiation}
+              onChange={(e) => setShowRadiation(e.target.checked)}
+              className="accent-purple-500 w-4 h-4 cursor-pointer"
+            />
+          </label>
+        )}
 
         <div className="border-t border-[#222] pt-3">
           <label className="flex items-center justify-between cursor-pointer text-gray-300 hover:text-white mb-3">
