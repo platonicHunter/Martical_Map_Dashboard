@@ -59,7 +59,7 @@ export default function MissionDebriefModal({
   const isSafest = activeRouteId === 1;
 
   return (
-    <div className="fixed inset-0 z-[1200] flex items-center justify-center bg-black/85 backdrop-blur-md p-4 font-mono">
+    <div className="fixed inset-0 z-1200lex items-center justify-center bg-black/85 backdrop-blur-md p-4 font-mono">
       <motion.div
         initial={{ scale: 0.92, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -120,7 +120,7 @@ export default function MissionDebriefModal({
 
         <div className="p-6 space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="p-4 border border-mars-panel bg-[#0a0a0a]">
+            <div className="p-4 border border-mars-panel bg-mars-bg">
               <div className="flex items-center gap-2 text-[10px] text-gray-400 uppercase mb-2">
                 <Radio className="w-3.5 h-3.5 text-purple-400" />
                 {isSafest
@@ -147,7 +147,7 @@ export default function MissionDebriefModal({
               </p>
             </div>
 
-            <div className="p-4 border border-mars-panel bg-[#0a0a0a]">
+            <div className="p-4 border border-mars-panel bg-mars-bg">
               <div className="flex items-center gap-2 text-[10px] text-gray-400 uppercase mb-2">
                 <Zap className="w-3.5 h-3.5 text-yellow-400" />
                 {isSafest
@@ -174,7 +174,7 @@ export default function MissionDebriefModal({
               </p>
             </div>
 
-            <div className="p-4 border border-mars-panel bg-[#0a0a0a]">
+            <div className="p-4 border border-mars-panel bg-mars-bg">
               <div className="flex items-center gap-2 text-[10px] text-gray-400 uppercase mb-2">
                 <Mountain className="w-3.5 h-3.5 text-mars-primary" />
                 {isSafest
