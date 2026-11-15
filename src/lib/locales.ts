@@ -1,5 +1,7 @@
 export const dict = {
   en: {
+    lat: "LAT",
+    lng: "LNG",
     systemTitle: "MARS NAVIGATION SYSTEM",
     system: "MARS NAVIGATION SYSTEM",
     network: "MARS-NET: ACTIVE",
@@ -109,6 +111,8 @@ export const dict = {
     safe: "SAFE",
   },
   mm: {
+    lat: "လက်တီကျုဒ်",
+    lng: "လောင်တီကျုဒ်",
     systemTitle: "အင်္ဂါဂြိုဟ် လမ်းညွှန်စနစ်",
     system: "အင်္ဂါဂြိုဟ် လမ်းညွှန်စနစ်",
     network: "အင်္ဂါဂြိုဟ်-ကွန်ရက်: ချိတ်ဆက်ထားသည်",

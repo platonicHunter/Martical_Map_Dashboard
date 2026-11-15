@@ -112,7 +112,7 @@ export default function TacticalLayersUI({
                   : "bg-[#111] text-gray-400 border-[#333] hover:text-white"
               }`}
             >
-              {isEn ? "ROUTE A (SAFE)" : "လမ်းကြောင်း A"}
+              {isEn ? "ROUTE A (SAFE)" : "အန္တာရယ်မရှိသော လမ်းကြောင်း A"}
             </button>
             <button
               onClick={() => setRouteType("shortest")}
@@ -122,7 +122,7 @@ export default function TacticalLayersUI({
                   : "bg-[#111] text-gray-400 border-[#333] hover:text-white"
               }`}
             >
-              {isEn ? "ROUTE B (SHORT)" : "လမ်းကြောင်း B"}
+              {isEn ? "ROUTE B (SHORT)" : "အတိုဆုံးလမ်းကြောင်း B"}
             </button>
           </div>
         </div>

@@ -9,7 +9,6 @@ export default function Header({
 }) {
   const { lang, toggleLang, t } = useLanguage();
   const isEn = lang === "en";
-
   const lat = coords ? coords[0].toFixed(4) : "18.4447";
   const lng = coords ? coords[1].toFixed(4) : "77.4508";
 
@@ -25,8 +24,8 @@ export default function Header({
       <div className="flex items-center gap-6">
         {/* 🚀 Dynamic Jezero Crater Coordinates */}
         <div className="hidden md:block text-gray-400 tracking-wider">
-          LAT: <span className="text-gray-200">{lat}° N</span> &nbsp; LNG:{" "}
-          <span className="text-gray-200">{lng}° E</span>
+          {t("lat")} <span className="text-gray-200">{lat}° N</span> &nbsp;{" "}
+          {t("lng")}: <span className="text-gray-200">{lng}° E</span>
         </div>
 
         <button
@@ -43,7 +42,7 @@ export default function Header({
             <span className="w-1 h-2.5 bg-mars-success"></span>
             <span className="w-1 h-3.5 bg-mars-success animate-pulse"></span>
           </div>
-          <span>MARS-NET: ACTIVE</span>
+          <span>{t("network")}</span>
         </div>
       </div>
     </header>
