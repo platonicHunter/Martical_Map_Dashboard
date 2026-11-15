@@ -95,6 +95,7 @@ export const dict = {
     rugged: "(Rugged)",
     initiateRover: "INITIATE ROVER",
     roverInMotion: "ROVER IN MOTION",
+    reRunTrajectory: "RE-RUN TRAJECTORY",
 
     //Map UI
     tacticalLayers: "TACTICAL LAYERS",
@@ -207,6 +208,7 @@ export const dict = {
     rugged: "(ကြမ်းတမ်း)",
     initiateRover: "ခရီးစဉ် စတင်ရန်",
     roverInMotion: "ROVER လှုပ်ရှားနေသည်",
+    reRunTrajectory: "လမ်းကြောင်းကို ပြန်လည်ပြသရန်",
 
     // Map UI
     tacticalLayers: "မြေပြင်အလွှာများ",

@@ -109,7 +109,7 @@ export default function MissionDetailsPanel({
               </>
             ) : isArrived ? (
               <>
-                <Flag className="w-4 h-4" /> RE-RUN TRAJECTORY
+                <Flag className="w-4 h-4" /> {t("reRunTrajectory")}
               </>
             ) : (
               <>
